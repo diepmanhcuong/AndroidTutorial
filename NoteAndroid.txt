@@ -1,0 +1,39 @@
+﻿các chú ý ở layout:
+	+ LinearLayout -vertical-weight:-height: 0dp  
+	+ LinearLayout -horizontal -weight:-width :0dp 
+	+ RelativeLayout to-> định vị với các view 
+	+ RelativeLayout align-> định vị với với viền
+	+ padding: bên trong view
+	+ margin ngoài view
++ Intent: có 2 loại Intent: tường minh và ko tường minh
+	+ để truyền dữ liệu từ Activity này sang Activity khác dùng biến Bundle 
+	Excample:
+	màn hình Activity1:
+		Intent mh2 = new Intent(Activity1.this,SecondActivity.class)
+		mh2.putExtra("ten bien","dữ liệu cần truyền"); 
+	màn hình SecondActivity:
+		Bundle bd = getIntent().getExtras();
+		if(bd!= null){
+			String tenbien = bd.getString("tenbien");
+			sout("dữ liệu cần truyền");
+	}
+	có thể send date kiểu dữ liệu number,String,Array,Object,bundle
+	
+	ImplicitIntent: chú ý các Action: VIEW, CALL, SENDTO, 
+			đối Với VIEW: {
+					intent.setAction(Intent.ACTION_VIEW);
+					intent.setData("http://") truyền 1 url
+					startActivity(intent);
+					}
+			đối với CALL: {
+					intent.setAction(Intent.ACTION_CALL);
+					intent.setData("tel: numberPhone") truyền 1 url
+					// cung cấp quyền truy cập CALL_PHONE trong permission;
+					startActivity(intent);
+					}
+			đối với SENDTO{
+					intent.setAction(Intent.ACTION_SENDTO);
+					intent.putExtra("sms_body","nội dung"); //sms_body là mặc định trong ActionSENDTO;
+					intent.setData("sms: numberPhone") truyền 1 url
+					startActivity(intent);
+					}

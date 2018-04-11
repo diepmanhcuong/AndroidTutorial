@@ -43,3 +43,11 @@ có 4 bước tạo ListView cơ bản:
 		2. tạo arrayAdapter để chứa đối tượng cần đưa vào list view
 		3. tạo add đối tượng vào arrayAdapter
 		4. đưa arrayAdapter vào listview
+	+để thay đổi 1 đối tượng ngẫu nhiên trong list view t sử dụng phương thức adapter.notifiDataSetChange;
+
+4 bước để tạo custom ListView của 1 đối tượng :
+		1. tạo đối tượng, thông qua 1 class
+		2. tạo xml phù hợp với đối tượng
+  		3.tạo Adapter của đối tượng
+		4. thêm Adapter vào listview
+LayoutInflater:  dùng để lấy 1 layout đã đc tạo của đối tượng

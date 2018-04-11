@@ -50,7 +50,7 @@ public class SinhVienAdapter extends BaseAdapter{
         txtyear.setText(String.valueOf(arrSinhViens.get(position).getYear()));
 
         TextView txtname = (TextView)convertView.findViewById(R.id.txten);
-        txtname.setText(arrSinhViens.get(position).getName());
+        txtname.setText(String.valueOf(arrSinhViens.get(position).getName()));
 
         return convertView;
     }

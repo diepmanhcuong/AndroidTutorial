@@ -37,3 +37,9 @@
 					intent.setData("sms: numberPhone") truyền 1 url
 					startActivity(intent);
 					}
+
+có 4 bước tạo ListView cơ bản: 
+		1. tạo listview trong layout
+		2. tạo arrayAdapter để chứa đối tượng cần đưa vào list view
+		3. tạo add đối tượng vào arrayAdapter
+		4. đưa arrayAdapter vào listview

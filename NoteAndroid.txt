@@ -51,3 +51,5 @@ có 4 bước tạo ListView cơ bản:
   		3.tạo Adapter của đối tượng
 		4. thêm Adapter vào listview
 LayoutInflater:  dùng để lấy 1 layout đã đc tạo của đối tượng
+
++ mặc định appAndroid là AppTheme

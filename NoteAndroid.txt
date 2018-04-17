@@ -53,3 +53,13 @@ có 4 bước tạo ListView cơ bản:
 LayoutInflater:  dùng để lấy 1 layout đã đc tạo của đối tượng
 
 + mặc định appAndroid là AppTheme
+
++ SharePreferences: cú pháp editor(thêm xóa,sửa)  SharedPreferences sharedPreferences = getSharedPreferences(SHARE_PREFERENCES_NAME,Context.MODE_PRIVATE);
+        				      SharedPreferences.Editor editor = sharedPreferences.edit();
+       				     //editor.remove(key);
+				     //editor.clear;
+				    //editor.PutTypeData(key,value);
+				    //editor.apply(); || editor.commit();
+		+ lấy dữ liệu: 	SharedPreferences sharedPreferences = getSharedPreferences(SHARE_PREFERENCES_NAME,Context.MODE_PRIVATE);
+				String name = sharedPreferences.getString(key,default Data);
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:id="@+id/linearContent"
+    android:background="@android:color/holo_blue_bright"
+    tools:context="com.example.admin.fragmentdemo.MainActivity">
+
+    <TextView
+        android:id="@+id/txmain"
+        android:text="Hello World"
+        android:textSize="30sp"
+        android:textColor="#f00"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btChange"
+        android:text="change text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <fragment android:layout_gravity="center"
+        android:id="@+id/fragmentA"
+        android:name="com.example.admin.fragmentdemo.FragmentA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/fragmentB"
+        android:name="com.example.admin.fragmentdemo.FragmentB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+﻿có 2 cách khởi tạo fragment: Cách 1:
+
+khởi tạo fragment: tạo xml-> tạo class java để khởi tạo fragment extends fragment (andorid.app)
+return inflater.inflate(fragment cần add vào, container, false);
+để add fragment vào activity: t khai báo. FragmentManage fragmentManager = getfragmentmanager()
+			       FragmentTransaction fragmentTransaction = fragment.beginTransaction();
+			       
+			      //khai báo fragmentA fragmentA = new fragmentA();
+			      fragmentTransaction.add(phần chứa Fragment, fragmentA)
+			   fragmentTransaction.commit();	
+		       Cách 2:+ khởi tạo fragment: tạo xml-> tạo class java để khởi tạo fragment extends fragment (andorid.app)
+				return inflater.inflate(fragment cần add vào, container, false);
+			
+			+ vào xml của mainActivity add fragment vào
+
+nếu muốn remove 1 fragment thì trong add t cần khai báo tag: example fragmentTransaction.add(R.id.LayoutContainner,fragment,"tag");
+						remove: fragmentB.getFragmentManager.findFragmentByTag("tag");// để kiểm tra fragmentB có trong PopBackStack thông qua tag
+						fragmentTransaction.remove(FragmentB);
+						fragmentTransaction.commit();
+			popBackStack: ta cần khai báo popBackStack trong phần adđ
+			Example: fragmentTransaction.addPopBackStack("tag");//phần tag có thể có hoặc không
+			phần gọi: getFragmentManager.popBackStack(); 
+			có thể thêm phần tag vào để back vào fragment cần back: getFragmentManager.popBackStack("tag",vị trí);
+
+ListFragment: đầu tiên ta tạo ListView trong xml của fragment (*) chú ý: id mặc định của ListView là @android:id/list
+	   sau đó ta tạo file java để createView cho listfragment nhớ extends ListFragment
+		sau đó t chỉ cần setListApdapter cho nó: 
+		Example: 
+			String[] arrCountry = {"Vietnam","America","Russia","korea","china"};
+			ArrayAdapter adapter;
+@Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+         adapter = new ArrayAdapter(getActivity(),android.R.layout.simple_list_item_1,country);
+         setListAdapter(adapter);
+        return inflater.inflate(R.layout.fragment_list,container,false);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Toast.makeText(getActivity(),country[position],Toast.LENGTH_SHORT).show();
+        super.onListItemClick(l, v, position, id);
+    }
+

@@ -1,0 +1,25 @@
+các bu?c t?o RecyclerView
+1. t?o project
+2. import RecyclerView trong guide.build
+3. t?o RecyclerView trong activity_main 
+4. t?o d?i tu?ng c?n dua vào recyclerView (1 class java có thu?c tính, constructor,getter,setter)
+5.t?o xlm c?a d?i tu?ng
+6.t?o adapter c?a d?i tu?ng
+7. dua t?t c? vào MainActivyti
+
+bu?c 6 example:
+	ta dã t?o d?i tu?ng Data g?m 2 thu?c tính: hính ?nh và name
+	+ ta t?o class DataAdapter
+	+ trong DataAdapter tao t?o 1 class tên ViewHolder extends RecyclerView, 
+  	+ máy s? t?o cho ta 1 phuong th?c pulic ViewHolder(View itemView){
+						super(itemView);
+				}
+	+Trên l?p DataAdapter extends RecycleView.Adapter<DataAdapter.ViewHolder>
+	+ chuong trình s? b?o ta import các phuong th?c c?a RecycleView.Adaper
+		+ onCreateViewHolder: d? tao l?y xml c?a d?i tu?ng b? vào recyclerview
+		+ onBindViewHolder:  set l?i các view trong xml c?a d?i tu?ng
+		+ getItemcount(); d?m s? lu?ng ph?n t? trong alData
+	+ ta t?o thu?c tính cho l?p DataAdapter và constructor c?a nó g?m:
+		+Arraylist d?i tu?ng: exam-> Arraylist<Data> alData = new Arraylist();
+
+		+ và 1 con context: exam-> Context context; dây là noi ch?a recyclerView
